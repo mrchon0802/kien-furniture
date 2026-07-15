@@ -1,0 +1,165 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  min-height: 85vh; /* chiếm 85% chiều cao màn hình */
+  background: #f5f2ec;
+}
+
+.heroLeft {
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.tag {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  color: #a08c5f;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  color: #1f1e1c;
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+  color: #6b5a3e;
+}
+
+.sub {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #7a7670;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  max-width: 300px;
+  margin-bottom: 36px;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btnPrimary {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  padding: 13px 28px;
+  background: #2c2c2a;
+  color: #f5f2ec;
+  border: none;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+  background: #1a1a18;
+}
+
+.btnOutline {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  padding: 13px 28px;
+  background: transparent;
+  border: 1px solid #d8d3c8;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2c2c2a;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.btnOutline:hover {
+  border-color: #a08c5f;
+  background: rgba(160, 140, 95, 0.05);
+}
+
+.heroRight {
+  position: relative;
+  background: #e8e0d5;
+}
+
+.roomSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 0.5px solid rgba(107, 90, 62, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #2c2c2a;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6b5a3e;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+  .heroRight {
+    min-height: 320px;
+    order: -1;
+  }
+  .heroLeft {
+    padding: 32px 24px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}

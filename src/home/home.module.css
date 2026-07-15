@@ -1,0 +1,12 @@
+.homePage {
+  font-family: sans-serif;
+  width: 100%;
+  min-height: 100vh; /* đảm bảo full màn hình */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  flex-grow: 1;
+  gap: 30px;
+}

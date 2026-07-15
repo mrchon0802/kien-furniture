@@ -1,0 +1,111 @@
+.accountContainer {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 0 150px;
+  align-items: flex-start;
+  gap: 30px;
+  overflow-y: hidden;
+}
+
+/* Sidebar */
+.sidebarControl {
+  min-width: 300px;
+  padding-top: 100px;
+  position: sticky;
+  top: 0;
+  overflow-y: hidden;
+}
+
+.sidebarControl ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  font-weight: 550;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--kds-color--color);
+  flex-direction: row;
+  text-decoration: none;
+}
+.itemIcon {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.sidebarControlItem.active .sidebarItem {
+  color: var(--kds-color--color-active);
+}
+.sidebarControlItem.active .itemIcon {
+  background: #f7f7f7;
+  color: var(--kds-color--color-active);
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--kds-color--color);
+  flex-direction: row;
+  text-decoration: none;
+
+  /* thêm reset cho button */
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .accountContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px 0 0 50px;
+  }
+  .sidebarControl {
+    padding-top: 0;
+  }
+  .mainContent {
+    padding: 0;
+  }
+  .mainContent h2 {
+    display: none;
+  }
+  .mobileHeaderContent {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .mobileIcon {
+    background: #eee;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .mobileLabel {
+    font-weight: 550;
+    font-size: 20px;
+  }
+  .mobileArrowDown {
+    font-size: 25px;
+  }
+  .mobileHeader {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .sidebarControl ul {
+    gap: 30px;
+  }
+}
