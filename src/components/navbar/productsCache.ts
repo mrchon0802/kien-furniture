@@ -18,6 +18,7 @@ let fetchPromise: Promise<Product[]> | null = null;
 export async function fetchAllProducts(): Promise<Product[]> {
   if (allProductsCache) return allProductsCache;
   if (fetchPromise) return fetchPromise;
+
   fetchPromise = fetch(`${apiUrl}/products`)
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -26,7 +27,12 @@ export async function fetchAllProducts(): Promise<Product[]> {
     .then((data) => {
       allProductsCache = data;
       return data;
+    })
+    .catch((err) => {
+      fetchPromise = null; // reset để lần sau thử lại được
+      throw err;
     });
+
   return fetchPromise;
 }
 
