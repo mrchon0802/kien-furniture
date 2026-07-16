@@ -1,7 +1,7 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  min-height: 85vh; /* chiếm 85% chiều cao màn hình */
+  min-height: 85vh;
   background: #f5f2ec;
 }
 
@@ -83,6 +83,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .btnPrimary:hover {
@@ -108,6 +109,7 @@
   transition:
     border-color 0.2s,
     background 0.2s;
+  white-space: nowrap;
 }
 
 .btnOutline:hover {
@@ -118,11 +120,6 @@
 .heroRight {
   position: relative;
   background: #e8e0d5;
-}
-
-.roomSvg {
-  width: 100%;
-  height: 100%;
 }
 
 .badge {
@@ -148,18 +145,90 @@
   flex-shrink: 0;
 }
 
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1.6fr;
+  }
+
+  .heroLeft {
+    padding: 0 32px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+}
+
+/* ===== MOBILE (STACK LAYOUT) ===== */
 @media (max-width: 768px) {
   .hero {
+    grid-template-columns: 1fr; /* fix chính: chuyển sang 1 cột */
     min-height: auto;
   }
+
   .heroRight {
-    min-height: 320px;
     order: -1;
+    min-height: 340px;
   }
+
   .heroLeft {
-    padding: 32px 24px;
+    padding: 32px 24px 40px;
+    align-items: flex-start;
   }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
   .title {
-    font-size: 32px;
+    font-size: 30px;
+    margin-bottom: 14px;
+  }
+
+  .sub {
+    font-size: 14px;
+    max-width: 100%; /* bỏ giới hạn 300px, tận dụng full width */
+    margin-bottom: 28px;
+  }
+
+  .btns {
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    flex: 1;
+    text-align: center;
+    padding: 13px 16px;
+  }
+
+  .badge {
+    bottom: 14px;
+    left: 14px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}
+
+/* ===== MOBILE NHỎ ===== */
+@media (max-width: 380px) {
+  .heroRight {
+    min-height: 280px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
   }
 }

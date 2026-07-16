@@ -1,3 +1,5 @@
+/* ProductSection.module.css */
+
 .section {
   padding: 32px;
   font-family: sans-serif;
@@ -36,4 +38,62 @@
   margin: 24px 0 20px;
   padding: 0 32px;
   color: #1a1a1a;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet ngang / laptop nhỏ */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet đứng */
+@media (max-width: 900px) {
+  .section {
+    padding: 24px 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0 16px 24px;
+  }
+
+  .pageTitle {
+    font-size: 22px;
+    padding: 0 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section {
+    padding: 16px 12px;
+  }
+
+  .header {
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 12px 20px;
+  }
+
+  .pageTitle {
+    font-size: 18px;
+    margin: 16px 0 12px;
+    padding: 0 12px;
+  }
 }

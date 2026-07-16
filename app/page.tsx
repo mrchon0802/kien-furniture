@@ -2,7 +2,6 @@
 
 import Home from "../src/home/Home";
 import Footer from "@/components/footer/Footer";
-import styles from "./global.module.css";
 
 export default function IndexPage() {
   return (
