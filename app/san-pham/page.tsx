@@ -10,8 +10,7 @@ interface Product {
   category: string;
 }
 
-const apiUrl =
-  process.env.NEXT_PUBLIC_SERVER_API_URL || "http://localhost:5000";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 interface SearchParams {
   room?: string;
