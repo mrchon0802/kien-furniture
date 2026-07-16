@@ -4,7 +4,7 @@ import CategoryGrid from "@/home/CategoryGrid/CategoryGrid";
 import ProductSection from "@/home/ProductSection/ProductSection";
 import PromoBanner from "@/home/PromoBanner/PromoBanner";
 
-const apiUrl = process.env.SERVER_API_URL || "http://localhost:5000";
+const apiUrl = process.env.NEXT_PUBLIC_API_UR || "http://localhost:5000";
 
 async function getData(endpoint: string, revalidateTime = 60) {
   try {
