@@ -3,7 +3,7 @@
 import { ProductDetail } from "@/components/productdetail/ProductDetail";
 import type { ProductType } from "@/type/ProductType";
 
-const apiUrl = process.env.SERVER_API_URL ?? "http://localhost:5000";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
 
 // ─── Fetch ─────────────────────────
 
